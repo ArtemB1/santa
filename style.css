@@ -1,0 +1,324 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes h2-run {
+  0% {
+    transform: none;
+  }
+  100%{
+    color: rgb(162, 0, 255);
+  }
+}
+
+h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  animation: h2-run 0.5s ease infinite alternate;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  background-image: url(/Santa/img/tmb_119452_5231.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.header {
+  height: 50px;
+  background-color: rgba(25, 74, 115, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+
+.header:hover {
+  opacity: 1;
+}
+
+.section {
+  height: 100vh;
+}
+
+.main {
+  background-image: url(img/tmb_119452_5231.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.nav__item {
+  color: white;
+  text-decoration: none;
+}
+
+/*
+.wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(64, 224, 208, 0.2);
+}
+*/
+.about {
+  z-index: 100;
+  position: relative;
+  display: flex;
+  width: 70%;
+  margin-bottom: 20px;
+  font-family: "Raleway", sans-serif;
+}
+.avatar {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid black;
+  flex-shrink: 0;
+  margin-right: 20px;
+  transition: all 1s ease 0s;
+}
+
+.avatar:hover {
+  transform: rotate(20deg);
+}
+
+.avatar__img {
+  height: 100%;
+}
+
+.info {
+  background-color: rgba(25, 74, 115, 0.9);
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  border: 5px solid black;
+}
+
+@keyframes title-run {
+  0% {
+    transform: none;
+  }
+  100%{
+    transform: translateX(100px);
+    color: rgb(255, 0, 0);
+  }
+}
+
+.info__title {
+  font-size: 50px;
+  padding: 0;
+  margin: 0;
+  animation: title-run 2s ease infinite alternate;
+}
+
+.info__text {
+  font-size: 20px;
+}
+
+@keyframes button-run {
+  0% {
+    transform: none;
+  }
+  100%{
+    transform: translateY(100px);
+  }
+}
+
+.button {
+  padding: 15px;
+  position: relative;
+  z-index: 100;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 1s ease 0s;
+  animation: button-run 2s ease infinite alternate;
+}
+
+.compliment {
+  background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1612606551_186-p-temno-zelenii-novogodnii-fon-243.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.compliment__content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.compliment__img-wrap {
+  height: 40%;
+}
+
+@keyframes img-run{
+  0% {
+    transform: none;
+  }
+  100%{
+    transform:translateY(100px);
+  }
+}
+
+.compliment__img {
+  height: 100%;
+  animation: img-run 2s ease infinite alternate;
+}
+
+.poem {
+  background-image: url(https://kartinkin.net/uploads/posts/2020-07/1593702007_20-p-novogodnii-fon-34.jpg);
+  background-size: cover;
+  padding-top: 50px;
+}
+
+.poem__title {
+  text-align: center;
+  color: white;
+}
+
+.poem__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poem__item {
+  width: 300px;
+  min-height: 580px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: #f5f5dc;
+  padding: 20px;
+  margin: 20px;
+}
+
+.poem__img {
+  height: 300px;
+  width: 100%;
+}
+
+.poem__img-elem {
+  height: 100%;
+  justify-content: center;
+}
+
+.msg {
+  background-image: url(https://i.ytimg.com/vi/ceECC2GyzGg/maxresdefault.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.form__title {
+  margin-bottom: 68px;
+}
+
+.form {
+  width: 600px;
+  background-image: url(https://inetru.net/wp-content/uploads/2015/12/%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%D0%B4%D0%BD%D0%B8%D0%B9-%D1%84%D0%BE%D0%BD-%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8-11.jpg);
+  background-position: right center;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 40px 40px 65px;
+  position: relative;
+}
+
+.form__content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.form__row {
+  margin-bottom: 10px;
+}
+
+.form__title-input,
+.form__message {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: red;
+}
+
+.form__input,
+.form_message {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.form__message {
+  resize: none;
+  height: 200px;
+}
+
+.form__button-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.form__submit {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #f82137;
+  border: none;
+  color: #ffffff;
+  border-radius: 6px;
+}
+
+.form__img-wrap {
+  height: 200px;
+  position: absolute;
+  right: 0;
+  top: -157px;
+}
+
+.form__img {
+  height: 100%;
+}
